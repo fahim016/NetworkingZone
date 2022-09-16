@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cisco.css" />
+  <title>UCS</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 fixed-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/output-onlinepngtools.png" class="img-thumbnail" alt="..." id="logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#learn" class="nav-link">Cisco</a>
+          </li>
+          <li class="nav-item">
+            <a href="#questions" class="nav-link">BDCOM</a>
+          </li>
+          <li class="nav-item">
+            <a href="#instructors" class="nav-link">UCS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="body_one">
+    <img src="https://wallpaperbat.com/img/414324-cisco-wallpaper-top-free-cisco-background.jpg" class="img-fluid"
+      alt="..." id="cover_image">
+
+    <h1 class="display-3 text-center mt-3 mb-5">Basic Switch Configuration</h1>
+    <div class="container mb-5">
+
+      <section id="questions" class="py-2">
+        <div class="container">
+          <div class="accordion accordion-flush" id="questions">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#question-one">
+                  Switch Access 
+                </button>
+              </h2>
+              <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">
+                  <button class="accordion_sub" style="font-weight: bold;">Access with Console</button>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                           
+                            <p class="card-text" style=" text-align: justify;"> <p style="text-align: justify;"> A console cable has two parts RJ45 to RS232 and RS232 to USB.When accessing a switch with a console cable, the RJ45 connector of the console cable should be connected to the console port of the switch and the USB connector should be connected to the USB port of the laptop.<br>
+                              Then Go to the Computer management <b>(Windows  + X)</b> then <b>Device Manager > Ports (COM & LPT) > Prolife USB to Serial COM port (COM1 or COM2 or else)</b><br>
+                              Now From Putty or Tera Team software we can access in the switch <b>CLI(Command Line Interface)</b> by selecting serial option and Input the COM Number.</p></p>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                         
+                            <img src="data:image/jpeg;base64,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" class="rounded mx-auto d-block img-fluid" alt="...">
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <hr>
+                  <button class="accordion_sub" style="font-weight: bold;">Access with Telnet</button>
+                  <div class="panel">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#question-two">
+                  Switch MODE
+                </button>
+              </h2>
+              <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">
+                  <button class="accordion_sub"><b>User Mode</b></button>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                           
+                            <p class="card-text" style=" text-align: justify;"> <p style="text-align: justify;">In the switch CLI(Command Line Interface) by default it is in USER Mode. In the USER Mode we can apply some show command by using this symbol ( ? )</p></p>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                         
+                            <img src="img/11.png" class="rounded mx-auto d-block img-fluid" alt="...">
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <hr>
+                  <button class="accordion_sub"><b>Previladge Mode</b></button>
+                  <div class="panel">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                           
+                            <p class="card-text" > <p style="text-align: justify;">By using <b>enable (en)</b> command from this user mode we can go to privilege mode and <b>(#)</b> is the symbol that you can understand it is in the Previladge Mode or Not. In this privilege mode the output of everything can be shown, then if we want to configure something, We can go to global configuration mode <b>[Global Configuration mode, mode allows users to modify the running system configuration.]</b>, for this we have to use <b>configuration terminal (Conf t)</b> command in privilege mode</p>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-body">
+                         
+                            <img src="img/12.png" class="rounded mx-auto d-block img-fluid" alt="...">
+                            <hr>
+                            <img src="img/13.png" class="rounded mx-auto d-block img-fluid" alt="...">
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#question-three">
+                  How to Set Password
+                </button>
+              </h2>
+              <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                         
+                          <p class="card-text" > <p style="text-align: justify;"></p>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                       
+                          <img src="img/12.png" class="rounded mx-auto d-block img-fluid" alt="...">
+                          <hr>
+                          <img src="img/13.png" class="rounded mx-auto d-block img-fluid" alt="...">
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#question-four">
+                  How Do I sign up?
+                </button>
+              </h2>
+              <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                  totam tempora accusamus modi explicabo accusantium consequatur,
+                  praesentium rem quisquam molestias at quos vero. Officiis ad
+                  velit doloremque at. Dignissimos praesentium necessitatibus
+                  natus corrupti cum consequatur aliquam! Minima molestias iure
+                  quam distinctio velit.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#question-five">
+                  Do you help me find a job?
+                </button>
+              </h2>
+              <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                  beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                  totam tempora accusamus modi explicabo accusantium consequatur,
+                  praesentium rem quisquam molestias at quos vero. Officiis ad
+                  velit doloremque at. Dignissimos praesentium necessitatibus
+                  natus corrupti cum consequatur aliquam! Minima molestias iure
+                  quam distinctio velit.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="p-5 bg-dark text-white text-center position-relative">
+    <div class="container">
+      <p class="lead">Copyright &copy; 2022 UCS</p>
+
+      <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h1"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="lead">Fill out this form and we will get back to you</p>
+          <form>
+            <div class="mb-3">
+              <label for="first-name" class="col-form-label">
+                First Name:
+              </label>
+              <input type="text" class="form-control" id="first-name" />
+            </div>
+            <div class="mb-3">
+              <label for="last-name" class="col-form-label">Last Name:</label>
+              <input type="text" class="form-control" id="last-name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="col-form-label">Phone:</label>
+              <input type="tel" class="form-control" id="phone" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+  <script>
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.060982, 42.35725],
+      zoom: 18,
+    })
+  </script>
+  <script>
+    var acc = document.getElementsByClassName("accordion_sub");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
